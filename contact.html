@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TechCorp</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-top: 76px;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .btn-custom {
+            background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+        }
+        
+        .btn-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 50px 0 30px 0;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+        
+        .navbar-nav .nav-link.active {
+            color: var(--secondary-color) !important;
+            font-weight: bold;
+        }
+        
+        .contact-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            margin: 0 auto 1rem auto;
+        }
+        
+        .form-control:focus {
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+        }
+        
+        .office-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .office-card:hover {
+            transform: translateY(-5px);
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .faq-item {
+            border: none;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .faq-button {
+            background: white;
+            border: none;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: left;
+            width: 100%;
+            font-weight: 500;
+        }
+        
+        .faq-button:focus {
+            box-shadow: none;
+        }
+        
+        .map-container {
+            height: 400px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="index.html">
+                <i class="bi bi-lightning-charge text-primary"></i>
+                TechCorp
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="features.html">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">
+                        Get In Touch
+                    </h1>
+                    <p class="lead mb-4">
+                        Ready to transform your business? We're here to help you every step of the way. 
+                        Contact us today to discuss your project.
+                    </p>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <i class="bi bi-telephone-fill display-1"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold">How Can We Help?</h2>
+                <p class="lead text-muted">Choose the best way to reach us</p>
+            </div>
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <div class="card contact-card p-4 text-center">
+                        <div class="contact-icon bg-primary">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+                        <h5>Call Us</h5>
+                        <p class="text-muted mb-3">Speak directly with our team</p>
+                        <p class="fw-bold">+1 (555) 123-4567</p>
+                        <small class="text-muted">Mon-Fri, 9AM-6PM EST</small>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card contact-card p-4 text-center">
+                        <div class="contact-icon bg-success">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                        <h5>Email Us</h5>
+                        <p class="text-muted mb-3">Send us a message anytime</p>
+                        <p class="fw-bold">hello@techcorp.com</p>
+                        <small class="text-muted">We'll respond within 24 hours</small>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card contact-card p-4 text-center">
+                        <div class="contact-icon bg-info">
+                            <i class="bi bi-chat-dots-fill"></i>
+                        </div>
+                        <h5>Live Chat</h5>
+                        <p class="text-muted mb-3">Chat with our support team</p>
+                        <button class="btn btn-outline-primary">Start Chat</button>
+                        <small class="text-muted d-block mt-2">Available 24/7</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Info -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-5">
+                            <h3 class="mb-4">Send Us a Message</h3>
+                            <form id="contactForm">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="firstName" class="form-label">First Name *</label>
+                                            <input type="text" class="form-control" id="firstName" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="lastName" class="form-label">Last Name *</label>
+                                            <input type="text" class="form-control" id="lastName" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Email Address *</label>
+                                            <input type="email" class="form-control" id="email" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="phone" class="form-label">Phone Number</label>
+                                            <input type="tel" class="form-control" id="phone">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="company" class="form-label">Company Name</label>
+                                    <input type="text" class="form-control" id="company">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="service" class="form-label">Service Interested In</label>
+                                    <select class="form-select" id="service">
+                                        <option value="">Select a service...</option>
+                                        <option value="web-development">Web Development</option>
+                                        <option value="mobile-development">Mobile Development</option>
+                                        <option value="cloud-solutions">Cloud Solutions</option>
+                                        <option value="ai-ml">AI & Machine Learning</option>
+                                        <option value="cybersecurity">Cybersecurity</option>
+                                        <option value="it-consulting">IT Consulting</option>
+                                        <option value="custom-solution">Custom Solution</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="budget" class="form-label">Project Budget</label>
+                                    <select class="form-select" id="budget">
+                                        <option value="">Select budget range...</option>
+                                        <option value="under-5k">Under $5,000</option>
+                                        <option value="5k-15k">$5,000 - $15,000</option>
+                                        <option value="15k-50k">$15,000 - $50,000</option>
+                                        <option value="50k-100k">$50,000 - $100,000</option>
+                                        <option value="over-100k">Over $100,000</option>
+                                    </select>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="message" class="form-label">Message *</label>
+                                    <textarea class="form-control" id="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="newsletter">
+                                    <label class="form-check-label" for="newsletter">
+                                        Subscribe to our newsletter for updates and insights
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-custom text-white btn-lg">
+                                    Send Message
+                                    <i class="bi bi-arrow-right ms-2"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <h5 class="mb-4">Contact Information</h5>
+                            <div class="mb-4">
+                                <div class="d-flex align-items-start">
+                                    <i class="bi bi-geo-alt-fill text-primary me-3 mt-1"></i>
+                                    <div>
+                                        <strong>Address</strong>
+                                        <p class="mb-0 text-muted">123 Tech Street<br>Digital City, DC 12345<br>United States</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-telephone-fill text-primary me-3"></i>
+                                    <div>
+                                        <strong>Phone</strong>
+                                        <p class="mb-0 text-muted">+1 (555) 123-4567</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-envelope-fill text-primary me-3"></i>
+                                    <div>
+                                        <strong>Email</strong>
+                                        <p class="mb-0 text-muted">hello@techcorp.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-clock-fill text-primary me-3"></i>
+                                    <div>
+                                        <strong>Business Hours</strong>
+                                        <p class="mb-0 text-muted">Mon-Fri: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <h6 class="mb-3">Follow Us</h6>
+                            <div class="social-links">
+                                <a href="#" class="text-primary me-3"><i class="bi bi-facebook"></i></a>
+                                <a href="#" class="text-info me-3"><i class="bi bi-twitter"></i></a>
+                                <a href="#" class="text-primary me-3"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" class="text-danger"><i class="bi bi-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Locations -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold">Our Offices</h2>
+                <p class="lead text-muted">Find us in major cities worldwide</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="office-card">
+                        <i class="bi bi-building fs-1 text-primary mb-3"></i>
+                        <h5>New York (HQ)</h5>
+                        <p class="text-muted">123 Tech Street<br>Digital City, NY 10001</p>
+                        <p><strong>+1 (555) 123-4567</strong></p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Get Directions</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="office-card">
+                        <i class="bi bi-building fs-1 text-success mb-3"></i>
+                        <h5>San Francisco</h5>
+                        <p class="text-muted">456 Innovation Ave<br>San Francisco, CA 94105</p>
+                        <p><strong>+1 (555) 987-6543</strong></p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Get Directions</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="office-card">
+                        <i class="bi bi-building fs-1 text-info mb-3"></i>
+                        <h5>London</h5>
+                        <p class="text-muted">789 Tech Tower<br>London EC2A 4DP, UK</p>
+                        <p><strong>+44 20 7123 4567</strong></p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Get Directions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold">Visit Our Headquarters</h2>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="map-container d-flex align-items-center justify-content-center bg-secondary text-white">
+                        <div class="text-center">
+                            <i class="bi bi-map display-1 mb-3"></i>
+                            <h4>Interactive Map</h4>
+                            <p>Interactive map would be embedded here using Google Maps or similar service</p>
+                            <button class="btn btn-light">View on Google Maps</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold">Frequently Asked Questions</h2>
+                <p class="lead text-muted">Quick answers to common questions</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header">
+                                <button class="faq-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    How long does a typical project take?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Project timelines vary depending on complexity and scope. Simple websites typically take 2-4 weeks, 
+                                    while complex applications can take 3-6 months. We provide detailed timelines during our initial consultation.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header">
+                                <button class="faq-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    What is your pricing structure?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We offer both fixed-price and hourly billing options depending on the project type. 
+                                    Our rates are competitive and transparent, with no hidden fees. Contact us for a detailed quote.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header">
+                                <button class="faq-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Do you provide ongoing support?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes! We provide comprehensive support packages including maintenance, updates, security monitoring, 
+                                    and 24/7 technical support. Support terms are customized based on your specific needs.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header">
+                                <button class="faq-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    Can you work with our existing team?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Absolutely! We regularly collaborate with in-house teams and other vendors. 
+                                    We're experienced in integrating with existing workflows and can adapt to your preferred tools and processes.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header">
+                                <button class="faq-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    What technologies do you specialize in?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We specialize in modern web technologies (React, Node.js, Python), mobile development 
+                                    (React Native, Flutter), cloud platforms (AWS, Azure, GCP), and emerging technologies like AI/ML.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="mb-3">Ready to Start Your Project?</h3>
+                    <p class="mb-0">Let's discuss your requirements and create something amazing together.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+                    <button class="btn btn-light btn-lg me-3" onclick="document.getElementById('contactForm').scrollIntoView()">
+                        Send Message
+                    </button>
+                    <a href="tel:+15551234567" class="btn btn-outline-light btn-lg">
+                        Call Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">
+                        <i class="bi bi-lightning-charge me-2"></i>
+                        TechCorp
+                    </h5>
+                    <p>Creating innovative solutions for a digital future. Your success is our mission.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white-50">About Us</a></li>
+                        <li><a href="services.html" class="text-white-50">Services</a></li>
+                        <li><a href="features.html" class="text-white-50">Features</a></li>
+                        <li><a href="#" class="text-white-50">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Support</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">Help Center</a></li>
+                        <li><a href="contact.html" class="text-white-50">Contact</a></li>
+                        <li><a href="#" class="text-white-50">Documentation</a></li>
+                        <li><a href="#" class="text-white-50">Status</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h6>Newsletter</h6>
+                    <p>Stay updated with our latest news and offers.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <button class="btn btn-outline-light" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 TechCorp. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Add navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.backdropFilter = 'blur(10px)';
+            } else {
+                navbar.style.backgroundColor = 'white';
+                navbar.style.backdropFilter = 'none';
+            }
+        });
+
+        // Form submission handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Simple validation
+            if (!firstName || !lastName || !email || !message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Simulate form submission
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="spinner-border spinner-border-sm me-2"></i>Sending...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Thank you for your message! We\'ll get back to you within 24 hours.');
+                this.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+
+        // Live chat button functionality
+        document.querySelector('.contact-card button').addEventListener('click', function() {
+            alert('Live chat feature would be integrated here with your preferred chat service (Intercom, Zendesk, etc.)');
+        });
+
+        // Add animation to contact cards
+        document.querySelectorAll('.contact-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - TechCorp</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-top: 76px;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            border-radius: 15px;
+            height: 100%;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .btn-custom {
+            background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+        }
+        
+        .btn-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 50px 0 30px 0;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+        
+        .navbar-nav .nav-link.active {
+            color: var(--secondary-color) !important;
+            font-weight: bold;
+        }
+        
+        .feature-detail {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .progress-custom {
+            height: 8px;
+            border-radius: 10px;
+        }
+        
+        .comparison-table {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="index.html">
+                <i class="bi bi-lightning-charge text-primary"></i>
+                TechCorp
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="features.html">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">
+                        Powerful Features
+                    </h1>
+                    <p class="lead mb-4">
+                        Discover the comprehensive suite of features that make TechCorp the preferred choice for modern businesses.
+                    </p>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <i class="bi bi-gear-fill display-1"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Core Features</h2>
+                <p class="lead text-muted">Everything you need to succeed in the digital world</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card feature-card p-4 text-center">
+                        <i class="bi bi-shield-check feature-icon text-success"></i>
+                        <h5 class="card-title">Enterprise Security</h5>
+                        <p class="card-text">Bank-level encryption, SSL certificates, and advanced threat protection to keep your data safe.</p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="bi bi-check text-success me-2"></i>256-bit SSL encryption</li>
+                            <li><i class="bi bi-check text-success me-2"></i>DDoS protection</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Regular security audits</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card feature-card p-4 text-center">
+                        <i class="bi bi-speedometer2 feature-icon text-primary"></i>
+                        <h5 class="card-title">Lightning Performance</h5>
+                        <p class="card-text">Optimized for speed with global CDN, caching, and performance monitoring.</p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="bi bi-check text-success me-2"></i>Sub-second load times</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Global CDN network</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Real-time monitoring</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card feature-card p-4 text-center">
+                        <i class="bi bi-phone feature-icon text-info"></i>
+                        <h5 class="card-title">Mobile Responsive</h5>
+                        <p class="card-text">Perfect user experience across all devices with responsive design and mobile optimization.</p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="bi bi-check text-success me-2"></i>Mobile-first design</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Touch-friendly interface</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Cross-platform compatibility</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card feature-card p-4 text-center">
+                        <i class="bi bi-graph-up feature-icon text-warning"></i>
+                        <h5 class="card-title">Analytics & Insights</h5>
+                        <p class="card-text">Comprehensive analytics dashboard with real-time data and actionable insights.</p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="bi bi-check text-success me-2"></i>Real-time analytics</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Custom reports</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Data visualization</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card feature-card p-4 text-center">
+                        <i class="bi bi-cloud-arrow-up feature-icon text-secondary"></i>
+                        <h5 class="card-title">Cloud Integration</h5>
+                        <p class="card-text">Seamless integration with popular cloud services and automatic backups.</p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="bi bi-check text-success me-2"></i>Multi-cloud support</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Automated backups</li>
+                            <li><i class="bi bi-check text-success me-2"></i>API integrations</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card feature-card p-4 text-center">
+                        <i class="bi bi-people feature-icon text-danger"></i>
+                        <h5 class="card-title">Team Collaboration</h5>
+                        <p class="card-text">Built-in collaboration tools for seamless teamwork and project management.</p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="bi bi-check text-success me-2"></i>Role-based access</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Real-time collaboration</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Project tracking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Comparison -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold">Feature Comparison</h2>
+                <p class="lead text-muted">See how our features stack up</p>
+            </div>
+            <div class="comparison-table p-4">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Feature</th>
+                                <th class="text-center">Basic Plan</th>
+                                <th class="text-center">Pro Plan</th>
+                                <th class="text-center">Enterprise</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>SSL Security</strong></td>
+                                <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td><strong>24/7 Support</strong></td>
+                                <td class="text-center"><i class="bi bi-x-circle-fill text-danger"></i></td>
+                                <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Advanced Analytics</strong></td>
+                                <td class="text-center"><i class="bi bi-x-circle-fill text-danger"></i></td>
+                                <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                                <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td><strong>API Access</strong></td>
+                                <td class="text-center"><i class="bi bi-x-circle-fill text-danger"></i></td>
+                                <td class="text-center">Limited</td>
+                                <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Custom Integrations</strong></td>
+                                <td class="text-center"><i class="bi bi-x-circle-fill text-danger"></i></td>
+                                <td class="text-center"><i class="bi bi-x-circle-fill text-danger"></i></td>
+                                <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Metrics -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold">Performance Metrics</h2>
+                <p class="lead text-muted">See the numbers that matter</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="feature-detail">
+                        <h5><i class="bi bi-speedometer2 text-primary me-2"></i>Load Time Performance</h5>
+                        <p>Average page load time: <strong>0.8 seconds</strong></p>
+                        <div class="progress progress-custom mb-2">
+                            <div class="progress-bar bg-success" style="width: 95%"></div>
+                        </div>
+                        <small class="text-muted">95% faster than industry average</small>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="feature-detail">
+                        <h5><i class="bi bi-shield-check text-success me-2"></i>Security Score</h5>
+                        <p>Security rating: <strong>A+ Grade</strong></p>
+                        <div class="progress progress-custom mb-2">
+                            <div class="progress-bar bg-success" style="width: 100%"></div>
+                        </div>
+                        <small class="text-muted">Perfect security score</small>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="feature-detail">
+                        <h5><i class="bi bi-graph-up text-info me-2"></i>Uptime Reliability</h5>
+                        <p>Guaranteed uptime: <strong>99.9%</strong></p>
+                        <div class="progress progress-custom mb-2">
+                            <div class="progress-bar bg-info" style="width: 99.9%"></div>
+                        </div>
+                        <small class="text-muted">Industry-leading reliability</small>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="feature-detail">
+                        <h5><i class="bi bi-people text-warning me-2"></i>Customer Satisfaction</h5>
+                        <p>Satisfaction rate: <strong>98%</strong></p>
+                        <div class="progress progress-custom mb-2">
+                            <div class="progress-bar bg-warning" style="width: 98%"></div>
+                        </div>
+                        <small class="text-muted">Based on 10,000+ reviews</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="mb-3">Ready to Experience These Features?</h3>
+                    <p class="mb-0">Start your free trial today and see why thousands of businesses choose TechCorp.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+                    <a href="contact.html" class="btn btn-light btn-lg">
+                        Start Free Trial
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">
+                        <i class="bi bi-lightning-charge me-2"></i>
+                        TechCorp
+                    </h5>
+                    <p>Creating innovative solutions for a digital future. Your success is our mission.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white-50">About Us</a></li>
+                        <li><a href="services.html" class="text-white-50">Services</a></li>
+                        <li><a href="features.html" class="text-white-50">Features</a></li>
+                        <li><a href="#" class="text-white-50">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Support</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">Help Center</a></li>
+                        <li><a href="contact.html" class="text-white-50">Contact</a></li>
+                        <li><a href="#" class="text-white-50">Documentation</a></li>
+                        <li><a href="#" class="text-white-50">Status</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h6>Newsletter</h6>
+                    <p>Stay updated with our latest news and offers.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <button class="btn btn-outline-light" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 TechCorp. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Add navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.backdropFilter = 'blur(10px)';
+            } else {
+                navbar.style.backgroundColor = 'white';
+                navbar.style.backdropFilter = 'none';
+            }
+        });
+
+        // Animate progress bars on scroll
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progressBars = entry.target.querySelectorAll('.progress-bar');
+                    progressBars.forEach(bar => {
+                        bar.style.transition = 'width 2s ease-in-out';
+                    });
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-detail').forEach(detail => {
+            observer.observe(detail);
+        });
+    </script>
+</body>
+</html>

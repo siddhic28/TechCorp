@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - TechCorp</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-top: 76px;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .btn-custom {
+            background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+        }
+        
+        .btn-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 50px 0 30px 0;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+        
+        .navbar-nav .nav-link.active {
+            color: var(--secondary-color) !important;
+            font-weight: bold;
+        }
+        
+        .team-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            border-radius: 15px;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            margin: 0 auto 1rem auto;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 1rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--secondary-color);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent-color);
+        }
+        
+        .values-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        
+        .values-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .values-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .stats-section {
+            background: var(--primary-color);
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="index.html">
+                <i class="bi bi-lightning-charge text-primary"></i>
+                TechCorp
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="features.html">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">
+                        About TechCorp
+                    </h1>
+                    <p class="lead mb-4">
+                        We're a team of passionate innovators dedicated to transforming businesses through cutting-edge technology solutions.
+                    </p>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <i class="bi bi-building display-1"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-bullseye fs-1 text-primary me-3"></i>
+                                <h3>Our Mission</h3>
+                            </div>
+                            <p class="card-text">
+                                To empower businesses of all sizes with innovative technology solutions that drive growth, 
+                                efficiency, and success in the digital age. We believe in making advanced technology 
+                                accessible and affordable for everyone.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-eye fs-1 text-success me-3"></i>
+                                <h3>Our Vision</h3>
+                            </div>
+                            <p class="card-text">
+                                To be the world's leading technology partner, recognized for innovation, reliability, 
+                                and exceptional customer service. We envision a future where technology seamlessly 
+                                integrates with business operations to create unprecedented opportunities.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Story -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold">Our Story</h2>
+                <p class="lead text-muted">The journey that brought us here</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title text-primary">2020 - The Beginning</h5>
+                                    <p class="card-text">
+                                        Founded by three tech enthusiasts with a vision to make enterprise-grade 
+                                        technology accessible to businesses of all sizes. Started in a small garage 
+                                        with big dreams.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title text-primary">2021 - First Major Client</h5>
+                                    <p class="card-text">
+                                        Landed our first enterprise client and expanded our team to 10 developers. 
+                                        Moved to our first real office space and established our core values.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title text-primary">2022 - Rapid Growth</h5>
+                                    <p class="card-text">
+                                        Reached 100+ clients and launched our flagship platform. Received Series A 
+                                        funding and expanded to multiple cities across the country.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title text-primary">2023 - Innovation Awards</h5>
+                                    <p class="card-text">
+                                        Won multiple industry awards for innovation and customer satisfaction. 
+                                        Launched our AI-powered solutions and reached 500+ happy clients.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title text-primary">2024 - Global Expansion</h5>
+                                    <p class="card-text">
+                                        Expanded internationally and established offices in 3 countries. 
+                                        Team grew to 50+ professionals and we're serving 1000+ clients globally.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title text-primary">2025 - The Future</h5>
+                                    <p class="card-text">
+                                        Continuing to innovate and push boundaries. Working on next-generation 
+                                        solutions that will revolutionize how businesses operate in the digital world.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold">Our Core Values</h2>
+                <p class="lead text-muted">The principles that guide everything we do</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="values-card">
+                        <i class="bi bi-lightbulb values-icon"></i>
+                        <h5>Innovation</h5>
+                        <p>We constantly push boundaries and embrace new technologies to deliver cutting-edge solutions that keep our clients ahead of the competition.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="values-card">
+                        <i class="bi bi-heart values-icon"></i>
+                        <h5>Customer First</h5>
+                        <p>Every decision we make is centered around our customers' success. Their goals become our goals, and their success is our greatest achievement.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="values-card">
+                        <i class="bi bi-shield-check values-icon"></i>
+                        <h5>Reliability</h5>
+                        <p>We build trust through consistent delivery, transparent communication, and unwavering commitment to quality in everything we do.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="values-card">
+                        <i class="bi bi-people values-icon"></i>
+                        <h5>Collaboration</h5>
+                        <p>We believe in the power of teamwork, both within our organization and with our clients, to achieve extraordinary results together.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="values-card">
+                        <i class="bi bi-graph-up-arrow values-icon"></i>
+                        <h5>Growth Mindset</h5>
+                        <p>We embrace challenges as opportunities to learn and grow, constantly evolving to meet the changing needs of our clients and industry.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="values-card">
+                        <i class="bi bi-award values-icon"></i>
+                        <h5>Excellence</h5>
+                        <p>We set high standards for ourselves and strive for perfection in every project, delivering solutions that exceed expectations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold">Meet Our Leadership Team</h2>
+                <p class="lead text-muted">The visionaries behind TechCorp</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card team-card p-4 text-center">
+                        <div class="team-avatar">
+                            <i class="bi bi-person-fill"></i>
+                        </div>
+                        <h5>Sarah Johnson</h5>
+                        <p class="text-muted mb-3">CEO & Co-Founder</p>
+                        <p class="small">
+                            Former VP of Engineering at Fortune 500 company. 15+ years of experience in 
+                            technology leadership and business strategy.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="text-primary me-2"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="text-info"><i class="bi bi-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card team-card p-4 text-center">
+                        <div class="team-avatar bg-success">
+                            <i class="bi bi-person-fill"></i>
+                        </div>
+                        <h5>Michael Chen</h5>
+                        <p class="text-muted mb-3">CTO & Co-Founder</p>
+                        <p class="small">
+                            Software architect with 20+ years of experience in building scalable systems. 
+                            Expert in AI/ML and cloud technologies.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="text-primary me-2"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="text-dark"><i class="bi bi-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card team-card p-4 text-center">
+                        <div class="team-avatar bg-warning">
+                            <i class="bi bi-person-fill"></i>
+                        </div>
+                        <h5>Emily Rodriguez</h5>
+                        <p class="text-muted mb-3">VP of Customer Success</p>
+                        <p class="small">
+                            Customer experience expert with proven track record of building world-class 
+                            support teams and driving customer satisfaction.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="text-primary me-2"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="text-info"><i class="bi bi-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold">Our Impact in Numbers</h2>
+            </div>
+            <div class="row text-center">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-number" data-target="1000">0</div>
+                    <h5>Happy Clients</h5>
+                    <p>Businesses we've helped transform</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-number" data-target="50">0</div>
+                    <h5>Team Members</h5>
+                    <p>Talented professionals worldwide</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-number" data-target="15">0</div>
+                    <h5>Awards Won</h5>
+                    <p>Industry recognition for excellence</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-number" data-target="99">0</div>
+                    <h5>% Uptime</h5>
+                    <p>Guaranteed system reliability</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="mb-3">Want to Join Our Success Story?</h3>
+                    <p class="mb-0">Let's work together to transform your business and achieve extraordinary results.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+                    <a href="contact.html" class="btn btn-light btn-lg">
+                        Get Started Today
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">
+                        <i class="bi bi-lightning-charge me-2"></i>
+                        TechCorp
+                    </h5>
+                    <p>Creating innovative solutions for a digital future. Your success is our mission.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white-50">About Us</a></li>
+                        <li><a href="services.html" class="text-white-50">Services</a></li>
+                        <li><a href="features.html" class="text-white-50">Features</a></li>
+                        <li><a href="#" class="text-white-50">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Support</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">Help Center</a></li>
+                        <li><a href="contact.html" class="text-white-50">Contact</a></li>
+                        <li><a href="#" class="text-white-50">Documentation</a></li>
+                        <li><a href="#" class="text-white-50">Status</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h6>Newsletter</h6>
+                    <p>Stay updated with our latest news and offers.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <button class="btn btn-outline-light" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 TechCorp. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Counter animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            const speed = 200; // The lower the slower
+
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const inc = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + inc);
+                    setTimeout(animateCounters, 10);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        }
+
+        // Intersection Observer for counter animation
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        observer.observe(document.querySelector('.stats-section'));
+
+        // Add navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.backdropFilter = 'blur(10px)';
+            } else {
+                navbar.style.backgroundColor = 'white';
+                navbar.style.backdropFilter = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

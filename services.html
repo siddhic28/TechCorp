@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - TechCorp</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-top: 76px;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .btn-custom {
+            background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+        }
+        
+        .btn-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 50px 0 30px 0;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+        
+        .navbar-nav .nav-link.active {
+            color: var(--secondary-color) !important;
+            font-weight: bold;
+        }
+        
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            border-radius: 15px;
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .service-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .pricing-card {
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .pricing-card.featured {
+            border: 3px solid var(--accent-color);
+        }
+        
+        .pricing-card.featured::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--accent-color);
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .pricing-card.featured .card-header {
+            margin-top: 2rem;
+        }
+        
+        .process-step {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .process-number {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--secondary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem auto;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="index.html">
+                <i class="bi bi-lightning-charge text-primary"></i>
+                TechCorp
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="features.html">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">
+                        Our Services
+                    </h1>
+                    <p class="lead mb-4">
+                        Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
+                    </p>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <i class="bi bi-tools display-1"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">What We Offer</h2>
+                <p class="lead text-muted">End-to-end solutions for your technology needs</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card p-4 text-center">
+                        <i class="bi bi-code-slash service-icon text-primary"></i>
+                        <h4>Web Development</h4>
+                        <p class="card-text mb-4">
+                            Custom web applications built with modern frameworks. Responsive, fast, and scalable solutions 
+                            tailored to your business needs.
+                        </p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="bi bi-check text-success me-2"></i>React & Vue.js Development</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Node.js Backend Services</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Progressive Web Apps</li>
+                            <li><i class="bi bi-check text-success me-2"></i>E-commerce Solutions</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card p-4 text-center">
+                        <i class="bi bi-phone service-icon text-success"></i>
+                        <h4>Mobile Development</h4>
+                        <p class="card-text mb-4">
+                            Native and cross-platform mobile applications that deliver exceptional user experiences 
+                            across iOS and Android platforms.
+                        </p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="bi bi-check text-success me-2"></i>iOS & Android Apps</li>
+                            <li><i class="bi bi-check text-success me-2"></i>React Native Development</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Flutter Applications</li>
+                            <li><i class="bi bi-check text-success me-2"></i>App Store Optimization</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card p-4 text-center">
+                        <i class="bi bi-cloud service-icon text-info"></i>
+                        <h4>Cloud Solutions</h4>
+                        <p class="card-text mb-4">
+                            Scalable cloud infrastructure and migration services. Optimize your operations with 
+                            AWS, Azure, and Google Cloud platforms.
+                        </p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="bi bi-check text-success me-2"></i>Cloud Migration</li>
+                            <li><i class="bi bi-check text-success me-2"></i>DevOps & CI/CD</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Infrastructure as Code</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Monitoring & Analytics</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card p-4 text-center">
+                        <i class="bi bi-robot service-icon text-warning"></i>
+                        <h4>AI & Machine Learning</h4>
+                        <p class="card-text mb-4">
+                            Intelligent solutions powered by artificial intelligence and machine learning to 
+                            automate processes and gain insights.
+                        </p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="bi bi-check text-success me-2"></i>Predictive Analytics</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Natural Language Processing</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Computer Vision</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Chatbot Development</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card p-4 text-center">
+                        <i class="bi bi-shield-check service-icon text-danger"></i>
+                        <h4>Cybersecurity</h4>
+                        <p class="card-text mb-4">
+                            Comprehensive security solutions to protect your digital assets and ensure compliance 
+                            with industry standards.
+                        </p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="bi bi-check text-success me-2"></i>Security Audits</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Penetration Testing</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Compliance Management</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Incident Response</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card p-4 text-center">
+                        <i class="bi bi-headset service-icon text-secondary"></i>
+                        <h4>IT Consulting</h4>
+                        <p class="card-text mb-4">
+                            Strategic technology consulting to help you make informed decisions and optimize 
+                            your IT infrastructure for maximum efficiency.
+                        </p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="bi bi-check text-success me-2"></i>Technology Strategy</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Digital Transformation</li>
+                            <li><i class="bi bi-check text-success me-2"></i>System Integration</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Performance Optimization</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold">Our Process</h2>
+                <p class="lead text-muted">How we deliver exceptional results</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="process-number">1</div>
+                        <h5>Discovery</h5>
+                        <p>We understand your business needs, goals, and challenges through detailed consultation and analysis.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="process-number">2</div>
+                        <h5>Planning</h5>
+                        <p>Our experts create a comprehensive strategy and roadmap tailored to your specific requirements.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="process-number">3</div>
+                        <h5>Development</h5>
+                        <p>We implement the solution using best practices, cutting-edge technologies, and agile methodologies.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="process-number">4</div>
+                        <h5>Support</h5>
+                        <p>Ongoing maintenance, updates, and support to ensure your solution continues to deliver value.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold">Service Packages</h2>
+                <p class="lead text-muted">Choose the package that fits your needs</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="card pricing-card">
+                        <div class="card-header text-center py-4">
+                            <h4>Starter</h4>
+                            <div class="display-6 fw-bold text-primary">$2,999</div>
+                            <small class="text-muted">per project</small>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Basic Website/App</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Responsive Design</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Basic SEO</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>3 Months Support</li>
+                                <li class="mb-2"><i class="bi bi-x text-danger me-2"></i>Advanced Features</li>
+                                <li class="mb-2"><i class="bi bi-x text-danger me-2"></i>API Integration</li>
+                            </ul>
+                            <div class="d-grid">
+                                <a href="contact.html" class="btn btn-outline-primary">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card pricing-card featured">
+                        <div class="card-header text-center py-4">
+                            <h4>Professional</h4>
+                            <div class="display-6 fw-bold text-primary">$7,999</div>
+                            <small class="text-muted">per project</small>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Advanced Website/App</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Custom Features</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>API Integrations</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>6 Months Support</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Analytics Setup</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Performance Optimization</li>
+                            </ul>
+                            <div class="d-grid">
+                                <a href="contact.html" class="btn btn-primary">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card pricing-card">
+                        <div class="card-header text-center py-4">
+                            <h4>Enterprise</h4>
+                            <div class="display-6 fw-bold text-primary">Custom</div>
+                            <small class="text-muted">pricing</small>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Full-Scale Solutions</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Custom Development</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Cloud Infrastructure</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>24/7 Support</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>Dedicated Team</li>
+                                <li class="mb-2"><i class="bi bi-check text-success me-2"></i>SLA Guarantee</li>
+                            </ul>
+                            <div class="d-grid">
+                                <a href="contact.html" class="btn btn-outline-primary">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Solutions -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold">Industry Solutions</h2>
+                <p class="lead text-muted">Specialized services for different industries</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-building fs-1 text-primary me-3"></i>
+                                <div>
+                                    <h5 class="mb-0">Financial Services</h5>
+                                    <small class="text-muted">Banks, Fintech, Insurance</small>
+                                </div>
+                            </div>
+                            <p class="card-text">
+                                Secure, compliant solutions for financial institutions including digital banking platforms, 
+                                payment processing systems, and regulatory compliance tools.
+                            </p>
+                            <ul class="list-unstyled small">
+                                <li><i class="bi bi-check text-success me-2"></i>PCI DSS Compliance</li>
+                                <li><i class="bi bi-check text-success me-2"></i>Fraud Detection Systems</li>
+                                <li><i class="bi bi-check text-success me-2"></i>Digital Banking Platforms</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-heart-pulse fs-1 text-danger me-3"></i>
+                                <div>
+                                    <h5 class="mb-0">Healthcare</h5>
+                                    <small class="text-muted">Hospitals, Clinics, Telemedicine</small>
+                                </div>
+                            </div>
+                            <p class="card-text">
+                                HIPAA-compliant healthcare solutions including telemedicine platforms, 
+                                electronic health records, and patient management systems.
+                            </p>
+                            <ul class="list-unstyled small">
+                                <li><i class="bi bi-check text-success me-2"></i>HIPAA Compliance</li>
+                                <li><i class="bi bi-check text-success me-2"></i>Telemedicine Platforms</li>
+                                <li><i class="bi bi-check text-success me-2"></i>EMR Integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-cart fs-1 text-success me-3"></i>
+                                <div>
+                                    <h5 class="mb-0">E-commerce & Retail</h5>
+                                    <small class="text-muted">Online Stores, Marketplaces</small>
+                                </div>
+                            </div>
+                            <p class="card-text">
+                                Scalable e-commerce solutions with advanced features like inventory management, 
+                                payment processing, and customer analytics.
+                            </p>
+                            <ul class="list-unstyled small">
+                                <li><i class="bi bi-check text-success me-2"></i>Multi-channel Commerce</li>
+                                <li><i class="bi bi-check text-success me-2"></i>Inventory Management</li>
+                                <li><i class="bi bi-check text-success me-2"></i>Customer Analytics</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-mortarboard fs-1 text-warning me-3"></i>
+                                <div>
+                                    <h5 class="mb-0">Education</h5>
+                                    <small class="text-muted">Schools, Universities, E-learning</small>
+                                </div>
+                            </div>
+                            <p class="card-text">
+                                Educational technology solutions including learning management systems, 
+                                online course platforms, and student information systems.
+                            </p>
+                            <ul class="list-unstyled small">
+                                <li><i class="bi bi-check text-success me-2"></i>Learning Management Systems</li>
+                                <li><i class="bi bi-check text-success me-2"></i>Virtual Classrooms</li>
+                                <li><i class="bi bi-check text-success me-2"></i>Student Portals</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold">What Our Clients Say</h2>
+                <p class="lead text-muted">Success stories from our valued partners</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="mb-3">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <p class="mb-3">
+                            "TechCorp transformed our outdated system into a modern, efficient platform. 
+                            Our productivity increased by 40% within the first month!"
+                        </p>
+                        <div class="d-flex align-items-center">
+                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                <i class="bi bi-person-fill text-white"></i>
+                            </div>
+                            <div>
+                                <strong>John Smith</strong>
+                                <div class="text-muted small">CEO, Manufacturing Corp</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="mb-3">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <p class="mb-3">
+                            "The mobile app they developed exceeded our expectations. User engagement 
+                            increased by 200% and we're seeing fantastic results!"
+                        </p>
+                        <div class="d-flex align-items-center">
+                            <div class="bg-success rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                <i class="bi bi-person-fill text-white"></i>
+                            </div>
+                            <div>
+                                <strong>Lisa Johnson</strong>
+                                <div class="text-muted small">Marketing Director, RetailPlus</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="mb-3">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <p class="mb-3">
+                            "Professional, reliable, and innovative. TechCorp delivered our cloud migration 
+                            on time and under budget. Highly recommended!"
+                        </p>
+                        <div class="d-flex align-items-center">
+                            <div class="bg-info rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                <i class="bi bi-person-fill text-white"></i>
+                            </div>
+                            <div>
+                                <strong>Michael Chen</strong>
+                                <div class="text-muted small">CTO, FinanceFirst</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="mb-3">Ready to Get Started?</h3>
+                    <p class="mb-0">Let's discuss your project requirements and find the perfect solution for your business.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+                    <a href="contact.html" class="btn btn-light btn-lg me-3">
+                        Get Quote
+                    </a>
+                    <a href="contact.html" class="btn btn-outline-light btn-lg">
+                        Schedule Call
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">
+                        <i class="bi bi-lightning-charge me-2"></i>
+                        TechCorp
+                    </h5>
+                    <p>Creating innovative solutions for a digital future. Your success is our mission.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white-50">About Us</a></li>
+                        <li><a href="services.html" class="text-white-50">Services</a></li>
+                        <li><a href="features.html" class="text-white-50">Features</a></li>
+                        <li><a href="#" class="text-white-50">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Support</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">Help Center</a></li>
+                        <li><a href="contact.html" class="text-white-50">Contact</a></li>
+                        <li><a href="#" class="text-white-50">Documentation</a></li>
+                        <li><a href="#" class="text-white-50">Status</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h6>Newsletter</h6>
+                    <p>Stay updated with our latest news and offers.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <button class="btn btn-outline-light" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 TechCorp. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Add navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.backdropFilter = 'blur(10px)';
+            } else {
+                navbar.style.backgroundColor = 'white';
+                navbar.style.backdropFilter = 'none';
+            }
+        });
+
+        // Add hover effects for service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.borderColor = 'var(--secondary-color)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.borderColor = '';
+            });
+        });
+    </script>
+</body>
+</html>

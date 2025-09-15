@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechCorp - Innovation & Solutions</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #3498db;
+      --accent-color: #e74c3c;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .hero-section {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 60px 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .feature-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: none;
+      border-radius: 15px;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+
+    .feature-icon {
+      font-size: 3rem;
+      color: var(--secondary-color);
+      margin-bottom: 1rem;
+    }
+
+    .navbar {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .btn-custom {
+      background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+      border: none;
+      padding: 12px 30px;
+      border-radius: 25px;
+    }
+
+    .btn-custom:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .stats-section {
+      background-color: #f8f9fa;
+      padding: 80px 0;
+    }
+
+    .stat-number {
+      font-size: 3rem;
+      font-weight: bold;
+      color: var(--secondary-color);
+    }
+
+    footer {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 50px 0 30px 0;
+    }
+
+    .social-links a {
+      color: white;
+      font-size: 1.5rem;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: var(--accent-color);
+    }
+
+    .navbar-nav .nav-link.active {
+      color: var(--secondary-color) !important;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3" href="index.html">
+        <i class="bi bi-lightning-charge text-primary"></i>
+        TechCorp
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Carousel -->
+<section class="hero-section position-relative">
+  <div class="container-fluid p-0">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+      
+      <!-- Slides -->
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active text-center text-white" style="background: url('slide1.jpg') no-repeat center center/cover; height:100vh;">
+          <div class="carousel-caption d-flex flex-column justify-content-center h-100">
+            <h1 class="display-4 fw-bold mb-4">Innovation Meets Excellence</h1>
+            <p class="lead mb-4">We deliver cutting-edge solutions that transform businesses and drive growth in the digital age.</p>
+            <div class="d-flex justify-content-center gap-4 mt-3">
+  <button class="btn btn-lg px-5 py-3 btn-custom text-white">Get Started</button>
+  <button class="btn btn-md px-4 py-2 btn-outline-light">Learn More</button>
+</div>
+
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-item text-center text-white" style="background: url('slide2.jpg') no-repeat center center/cover; height:100vh;">
+          <div class="carousel-caption d-flex flex-column justify-content-center h-100">
+            <h1 class="display-4 fw-bold mb-4">Secure • Fast • Reliable</h1>
+            <p class="lead mb-4">Join thousands of satisfied clients who trust TechCorp for their technology needs.</p>
+            <i class="bi bi-rocket display-1 mb-4"></i>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="carousel-item text-center text-white" style="background: url('slide3.jpg') no-repeat center center/cover; height:100vh;">
+          <div class="carousel-caption d-flex flex-column justify-content-center h-100">
+            <h1 class="display-4 fw-bold mb-4">Transform Your Business</h1>
+            <p class="lead mb-4">Let’s discuss how we can help you achieve success with our innovative solutions.</p>
+            <button class="btn btn-light btn-lg">Start Your Project</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls (arrows) -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+      <!-- Indicators (dots) -->
+      <div class="carousel-indicators position-absolute mb-4" style="bottom: 20px;">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-3 mb-4">
+          <div class="stat-number">500+</div>
+          <p class="text-muted">Happy Clients</p>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="stat-number">1000+</div>
+          <p class="text-muted">Projects Completed</p>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="stat-number">50+</div>
+          <p class="text-muted">Team Members</p>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="stat-number">5+</div>
+          <p class="text-muted">Years Experience</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <h5 class="mb-3"><i class="bi bi-lightning-charge me-2"></i>TechCorp</h5>
+          <p>Creating innovative solutions for a digital future. Your success is our mission.</p>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h6>Company</h6>
+          <ul class="list-unstyled">
+            <li><a href="about.html" class="text-white-50">About Us</a></li>
+            <li><a href="services.html" class="text-white-50">Services</a></li>
+            <li><a href="features.html" class="text-white-50">Features</a></li>
+            <li><a href="#" class="text-white-50">Careers</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h6>Support</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white-50">Help Center</a></li>
+            <li><a href="contact.html" class="text-white-50">Contact</a></li>
+            <li><a href="#" class="text-white-50">Documentation</a></li>
+            <li><a href="#" class="text-white-50">Status</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <h6>Newsletter</h6>
+          <p>Stay updated with our latest news and offers.</p>
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="Enter your email">
+            <button class="btn btn-outline-light" type="button">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="mb-0">&copy; 2025 TechCorp. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <div class="social-links">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
